@@ -1,0 +1,14 @@
+C:\Users\stephane.lafontaine\Documents\Dev\Angular\AreaCalculatorRestApi\bin\Debug\netcoreapp2.2\AreaCalculatorRestApi.deps.json
+C:\Users\stephane.lafontaine\Documents\Dev\Angular\AreaCalculatorRestApi\bin\Debug\netcoreapp2.2\AreaCalculatorRestApi.runtimeconfig.json
+C:\Users\stephane.lafontaine\Documents\Dev\Angular\AreaCalculatorRestApi\bin\Debug\netcoreapp2.2\AreaCalculatorRestApi.runtimeconfig.dev.json
+c:\Users\stephane.lafontaine\Documents\Dev\Angular\AreaCalculatorRestApi\bin\Debug\netcoreapp2.2\AreaCalculatorRestApi.dll
+c:\Users\stephane.lafontaine\Documents\Dev\Angular\AreaCalculatorRestApi\bin\Debug\netcoreapp2.2\AreaCalculatorRestApi.pdb
+c:\Users\stephane.lafontaine\Documents\Dev\Angular\AreaCalculatorRestApi\obj\Debug\netcoreapp2.2\AreaCalculatorRestApi.csprojAssemblyReference.cache
+c:\Users\stephane.lafontaine\Documents\Dev\Angular\AreaCalculatorRestApi\obj\Debug\netcoreapp2.2\AreaCalculatorRestApi.csproj.CoreCompileInputs.cache
+c:\Users\stephane.lafontaine\Documents\Dev\Angular\AreaCalculatorRestApi\obj\Debug\netcoreapp2.2\AreaCalculatorRestApi.RazorAssemblyInfo.cache
+c:\Users\stephane.lafontaine\Documents\Dev\Angular\AreaCalculatorRestApi\obj\Debug\netcoreapp2.2\AreaCalculatorRestApi.RazorAssemblyInfo.cs
+c:\Users\stephane.lafontaine\Documents\Dev\Angular\AreaCalculatorRestApi\obj\Debug\netcoreapp2.2\AreaCalculatorRestApi.AssemblyInfoInputs.cache
+c:\Users\stephane.lafontaine\Documents\Dev\Angular\AreaCalculatorRestApi\obj\Debug\netcoreapp2.2\AreaCalculatorRestApi.AssemblyInfo.cs
+c:\Users\stephane.lafontaine\Documents\Dev\Angular\AreaCalculatorRestApi\obj\Debug\netcoreapp2.2\AreaCalculatorRestApi.RazorTargetAssemblyInfo.cache
+c:\Users\stephane.lafontaine\Documents\Dev\Angular\AreaCalculatorRestApi\obj\Debug\netcoreapp2.2\AreaCalculatorRestApi.dll
+c:\Users\stephane.lafontaine\Documents\Dev\Angular\AreaCalculatorRestApi\obj\Debug\netcoreapp2.2\AreaCalculatorRestApi.pdb
