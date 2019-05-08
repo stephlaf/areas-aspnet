@@ -33,36 +33,36 @@ namespace AreaCalculatorRestApi.Controllers
         [HttpGet("{id}")]
         public ActionResult<Rectangle> Get(int id)
         {
-            // IEnumerable<Rectangle> result = _rectanglesList.Where(rectangle => rectangle.Id == id);
-            var result = _rectanglesList.Where(rectangle => rectangle.Id == id);
-            
-            try
-            {
-                return Ok(result);
-            }
-            catch
-            {
-                return NotFound("Not Found");
-            }
-            
+            var result = _rectanglesList.FirstOrDefault(rectangle => rectangle.Id == id);
+            if (result == null) return NotFound("Not Found"); 
+            return Ok(result);
         }
 
         // POST api/areas
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Rectangle rectangle)
         {
+            _rectanglesList.Add(rectangle);
         }
 
         // PUT api/areas/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Rectangle updatedRectangle)
         {
+            var result = _rectanglesList.FirstOrDefault(rectangle => rectangle.Id == id);
+            result.Name = updatedRectangle.Name;
+            result.Length = updatedRectangle.Length;
+            result.Width = updatedRectangle.Width;
+            result.Area = updatedRectangle.Id;
+            result.Unit = updatedRectangle.Unit;
         }
 
         // DELETE api/areas/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+          var rectToDelete = _rectanglesList.FirstOrDefault(rectangle => rectangle.Id == id);
+          _rectanglesList.Remove(rectToDelete);
         }
     }
 }
