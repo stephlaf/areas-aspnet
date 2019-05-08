@@ -20,21 +20,31 @@ namespace AreaCalculatorRestApi.Controllers
             new Rectangle(){Id= 1, Name= "AA", Width= 1, Length= 1, Area= 1, Unit= "meters"},
             new Rectangle(){Id= 2, Name= "BB", Width= 2, Length= 2, Area= 2, Unit= "meters"},
             new Rectangle(){Id= 3, Name= "CC", Width= 3, Length= 3, Area= 3, Unit= "feet"}
-        }
+        };
 
         // GET api/areas
         [HttpGet]
-        public ActionResult<IEnumerable<List<Rectangle>> Get()
+        public ActionResult<IEnumerable<Rectangle>> Get()
         {
-            // return new double[] { 10.44, 44 };
             return _rectanglesList;
         }
 
         // GET api/areas/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<Rectangle> Get(int id)
         {
-            return "value";
+            // IEnumerable<Rectangle> result = _rectanglesList.Where(rectangle => rectangle.Id == id);
+            var result = _rectanglesList.Where(rectangle => rectangle.Id == id);
+            
+            try
+            {
+                return Ok(result);
+            }
+            catch
+            {
+                return NotFound("Not Found");
+            }
+            
         }
 
         // POST api/areas
