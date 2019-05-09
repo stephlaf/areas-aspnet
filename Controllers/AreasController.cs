@@ -34,7 +34,7 @@ namespace AreaCalculatorRestApi.Controllers
         public ActionResult<Rectangle> Get(int id)
         {
             var result = _rectanglesList.FirstOrDefault(rectangle => rectangle.Id == id);
-            if (result == null) return NotFound("Not Found"); 
+            if (result == null) return NotFound($"Rectangle with Id {id} was not Found"); 
             return Ok(result);
         }
 
