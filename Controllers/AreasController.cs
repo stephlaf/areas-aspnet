@@ -36,11 +36,22 @@ namespace AreaCalculatorRestApi.Controllers
         [HttpGet()]
         public ActionResult<Rectangle> Get([FromQuery(Name = "term")] string term)
         {
+            // If no search term, return all rectangles
             if (term == null) return Ok(_rectanglesList);
 
-            var result = _rectanglesList.Where(rectangle => rectangle.Name.Contains(term));
-            if (result == null) return NotFound("No Rectangle contains {term}"); 
-            return Ok(result);
+            int value;
+
+            if (int.TryParse(term, out value)) {
+                var result = _rectanglesList.Where(rectangle => rectangle.Width == value || rectangle.Length == value);
+                return Ok(result);
+            } else  {
+                var result = _rectanglesList.Where(rectangle => rectangle.Name.Contains(term));
+                return Ok(result);
+            }
+            //  else {
+            //     return NotFound("No Rectangle contains {term}"); 
+            // }
+
         }
 
         // POST api/areas
