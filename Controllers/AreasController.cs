@@ -22,13 +22,6 @@ namespace AreaCalculatorRestApi.Controllers
             new Rectangle(){Id= 3, Name= "CC", Width= 3, Length= 3, Area= 3, Unit= "feet"}
         };
 
-        // GET api/areas
-        // [HttpGet]
-        // public ActionResult<IEnumerable<Rectangle>> Get()
-        // {
-        //     return _rectanglesList;
-        // }
-
         // GET api/areas/5
         [HttpGet("{id}")]
         public ActionResult<Rectangle> Get(int id)
@@ -38,14 +31,15 @@ namespace AreaCalculatorRestApi.Controllers
             return Ok(result);
         }
 
-        //  GET api/areas/?name=aa
+        //  GET api/areas
+        //  GET api/areas/?term=aa
         [HttpGet()]
         public ActionResult<Rectangle> Get([FromQuery(Name = "term")] string term)
         {
             if (term == null) return Ok(_rectanglesList);
 
-            var result = _rectanglesList.Where(rectangle => rectangle.Name == term);
-            if (result == null) return NotFound($"Rectangle with Name {term} was not Found"); 
+            var result = _rectanglesList.Where(rectangle => rectangle.Name.Contains(term));
+            if (result == null) return NotFound("No Rectangle contains {term}"); 
             return Ok(result);
         }
 
