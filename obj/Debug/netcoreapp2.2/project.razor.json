@@ -312,7 +312,7 @@
             "Documentation": "\n            <summary>\n            Additional parameters for the route.\n            </summary>\n        ",
             "Diagnostics": [],
             "Metadata": {
-              "Common.PropertyName": "RouteAreas"
+              "Common.PropertyName": "RouteValues"
             }
           }
         ],
@@ -1395,7 +1395,7 @@
             "Documentation": "\n            <summary>\n            Additional parameters for the route.\n            </summary>\n        ",
             "Diagnostics": [],
             "Metadata": {
-              "Common.PropertyName": "RouteAreas"
+              "Common.PropertyName": "RouteValues"
             }
           }
         ],
@@ -1536,7 +1536,7 @@
             "Documentation": "\n            <summary>\n            Additional parameters for the route.\n            </summary>\n        ",
             "Diagnostics": [],
             "Metadata": {
-              "Common.PropertyName": "RouteAreas"
+              "Common.PropertyName": "RouteValues"
             }
           }
         ],
