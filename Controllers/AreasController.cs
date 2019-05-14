@@ -48,16 +48,18 @@ namespace AreaCalculatorRestApi.Controllers
             } else if (term.StartsWith("l") || term.StartsWith("w"))  {
                 string prefix = term.Substring(0, 1);
                 string numberStr = term.Remove(0, 1);
-                int number = Convert.ToInt32(numberStr);
-
-                var result = _rectanglesList.Where(rectangle => rectangle.Width == number || rectangle.Length == number );
-                return Ok(result);
-            } 
-            else  {
+                if (term.Length > 1) {
+                    int number = Convert.ToInt32(numberStr);
+                    var result = _rectanglesList.Where(rectangle => rectangle.Width == number || rectangle.Length == number );
+                    return Ok(result);
+                }   else  {
                 var result = _rectanglesList.Where(rectangle => rectangle.Name.Contains(term));
                 return Ok(result);
-            }
-            
+                }
+            } else  {
+                var result = _rectanglesList.Where(rectangle => rectangle.Name.Contains(term));
+                return Ok(result);
+            } 
 
         }
 
